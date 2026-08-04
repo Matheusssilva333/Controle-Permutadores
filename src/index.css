@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #090d16;
+    --bg-card: #111827;
+    --bg-card-hover: #1f293d;
+    --border-dark: #1e293b;
+    --accent-cyan: #06b6d4;
+    --accent-amber: #f59e0b;
+    --accent-emerald: #10b981;
+    --accent-crimson: #ef4444;
+    --text-muted: #94a3b8;
+  }
+
+  body {
+    background-color: #070a12;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphism & Industrial Utilities */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-accent {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.6) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.industrial-glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+}
+
+.industrial-glow-amber {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3);
+}
+
+.industrial-glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.3);
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
